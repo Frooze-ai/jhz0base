@@ -16,19 +16,16 @@ std::string coz(const std::string& sifreliMetin, int anahtar) {
 int main() {
     std::string metin;
     int anahtar;
-
-    // Kullanýcýdan metni ve þifreleme anahtarýný al
+    
     std::cout << "Sifrelenecek metni girin: ";
     std::getline(std::cin, metin);
 
     std::cout << "Key'i girin(rastgele sayilar, harfler ve semboller) ";
     std::cin >> anahtar;
 
-    // Þifreleme
     std::string sifreliMetin = sifrele(metin, anahtar);
     std::cout << "Sifreli metin: " << sifreliMetin << std::endl;
 
-    // Þifreyi çözme
     std::string orijinalMetin = coz(sifreliMetin, anahtar);
     std::cout << "Orijinal metin: " << orijinalMetin << std::endl;
 
